@@ -1,0 +1,33 @@
+name: Deploy React App
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build project
+      run: npm run build
+
+    - name: Deploy to GitHub Pages
+      env:
+        REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
+        REACT_APP_API_FIELDS: ${{ secrets.REACT_APP_API_FIELDS }}
+        REACT_APP_API_IMG: ${{ secrets.REACT_APP_API_IMG }}
+        REACT_APP_API_LIMIT: ${{ secrets.REACT_APP_API_LIMIT }}
+      run: npm run deploy
