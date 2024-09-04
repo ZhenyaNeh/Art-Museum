@@ -1,0 +1,99 @@
+:root {
+    --highlight-color-header: #E0A449;
+    --highlight-color-main: #F17900;
+    --background-color: #f9f9f9;
+}
+
+main.favorite-page {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.favorite-page .title-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.favorite-page .title-info .title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 28px;
+}
+
+.favorite-page .title-info .title h1 {
+    max-width: 500px;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
+.favorite-page .title-info .title  h1 .highlight {
+    color: var(--highlight-color-main);
+}
+
+.imgBookmark {
+    width: 0.7em;
+}
+
+/* =============================================================== */
+
+.favorite-art {
+    max-width: 1200px;
+    text-align: center;
+    padding: 80px 20px;
+    padding-bottom: 0;
+}
+
+.favorite-art h3 {
+    font-size: 1.1em;
+    margin-bottom: 0px;
+    font-weight: 300;
+    color: var(--highlight-color-header);
+}
+
+.favorite-art h2 {
+    font-size: 1.8em;
+    margin: 0 0 40px 0;
+}
+
+.favorite-art-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.other-works {
+    margin-bottom: 60px;
+}
+
+/* .card-item.secondary {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    height: 150px;
+    margin: 20px 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-item.card-item.secondary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-item.secondary img {
+    width: 100px;
+    height: 100px;
+    display: block;
+} */

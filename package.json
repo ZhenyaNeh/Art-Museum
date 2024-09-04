@@ -1,5 +1,6 @@
 {
   "name": "modsen-art-museum",
+  "homepage": "https://ZhenyaNeh.github.io/ArtMuseum",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,13 +11,21 @@
     "@types/node": "^16.18.106",
     "@types/react": "^18.3.4",
     "@types/react-dom": "^18.3.0",
+    "@types/react-router-dom": "^5.3.3",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
+    "gh-pages": "^6.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.1",
     "react-scripts": "5.0.1",
+    "sass": "^1.78.0",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

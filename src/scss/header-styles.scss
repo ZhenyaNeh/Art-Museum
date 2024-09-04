@@ -1,0 +1,88 @@
+:root {
+    --highlight-color-header: #E0A449;
+    --highlight-color-main: #F17900;
+    --background-color: #f9f9f9;
+}
+
+ body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+body, #root, .div-body-style {
+    height: 1000px;
+}
+
+.div-body-style {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #333;
+}
+
+.header-contaner {
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.header-left img {
+    width: 30px;
+    height: auto;
+}
+
+.header-left .logo-name {
+    margin: 0 5px;
+}
+
+.highlight {
+    color: var(--highlight-color-header);
+}
+
+.header-right img {
+    width: 20px;
+    height: auto;
+}
+
+.header-right {
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.header-right div {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.header-right div:last-child {
+    margin-right: 0;
+}
+
+.header-right div span {
+    margin: 0 5px;
+
+}
+
+.header-right div span:last-child {
+    margin-right: 0;
+}
+
+.link-style{
+    text-decoration: none;
+    color: white;
+} 

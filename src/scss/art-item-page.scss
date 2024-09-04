@@ -1,0 +1,113 @@
+main.art-item-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: auto;
+    flex-grow: 1;
+}
+
+/* Image Display */
+.image-display {
+    flex: 1 1 35%;
+    position: relative;
+    margin-right: 20px;
+}
+
+.image-display img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-display div {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 1em;
+    border-radius: 50%;
+}
+
+.image-display div img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Description Display */
+.description-display {
+    flex: 1 1 55%;
+    padding: 10px 0 0 50px;
+}
+
+.art-info {
+    margin-bottom: 20px;
+}
+
+.art-info h2 {
+    font-size: 2rem;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.art-info h3 {
+    font-size: 1.5rem;
+    margin: 0 0 5px;
+    color: #666;
+}
+
+.art-info h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+.overview {
+    margin-top: 120px;
+}
+
+/* Overview Styling */
+.overview h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.overview ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.overview ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.overview ul li .highlight {
+    font-weight: bold;
+    color:  var(--highlight-color-header);
+}
+
+@media (max-width: 740px) {
+    main.art-item-page {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 100px 20px;
+    }
+
+    .image-display {
+        position: relative;
+        margin: 20px;
+    }
+
+    .description-display {
+        padding: 20px;
+    }
+    .overview{
+        margin-top: 100px;
+    }
+}

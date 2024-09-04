@@ -1,0 +1,42 @@
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+}
+
+.footer-contaner{
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.footer-left img {
+    width: 30px;
+    height: auto;
+}
+
+.footer-left .logo-name {
+    margin: 0 5px;
+}
+
+.highlight{
+    color: var(--highlight-color-header);
+}
+
+.footer-right img {
+    width: 100px;
+    height: auto;
+}
+
+.footer-right {
+    display: inline-flex;
+    align-items: center;
+}
