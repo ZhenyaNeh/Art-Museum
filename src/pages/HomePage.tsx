@@ -6,7 +6,6 @@ import CardDisplay from '../components/pagination-components/CardDisplay'
 import Pagination from '../components/pagination-components/Pagination'
 import SearchBar from '../components/search-bar-component/SearchBar'
 import '../scss/home-page.scss';
-import Loader from '../components/loader-component/Loader'
 
 const HomePage: FC = () => {
   const [arts, setArts] = useState<ArtsInfo | null>(null);
@@ -48,7 +47,6 @@ const HomePage: FC = () => {
 
   return (
     <>
-      {loading ? <Loader/> : 
       <main className='home-page'>
         <section className='title-info'>
           <div className='title'>
@@ -79,7 +77,7 @@ const HomePage: FC = () => {
             ))}
           </div>
         </section>
-      </main>}
+      </main>
     </>
   )
 }
