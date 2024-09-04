@@ -15,12 +15,16 @@ function Header() {
         </div>
         <div className="header-right">
           <div>
-            <img src={homeLogo} alt="logo-app" />
-            <span className="favorites-text"><Link className='link-style' to="/">Home</Link></span>
+            <Link className='link-style' to="/">
+              <img src={homeLogo} alt="logo-app" />
+              <span className="favorites-text">Home</span>
+            </Link>
           </div>
           <div>
-            <img src={bookmarkLogo} alt="logo-app" />
-            <span className="favorites-text"><Link className='link-style' to="/favorites">Your favorites</Link></span>
+            <Link className='link-style' to="/favorites">
+              <img src={bookmarkLogo} alt="logo-app" />
+              <span className="favorites-text">Your favorites</span>
+            </Link>
           </div>
         </div>
       </div>

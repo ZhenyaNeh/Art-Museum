@@ -40,6 +40,8 @@ h1 .highlight {
 
 .search-bar {
     position: relative;
+    display: flex;
+    justify-content: center;
     width: 50%;
     margin: 0 auto;
     margin-top: 80px;
@@ -134,11 +136,6 @@ h1 .highlight {
     color: var(--highlight-color-header);
 }
 
-
-
-
-/* =============================================================== */
-
 .special-gallery,
 .other-works {
     max-width: 1200px;
@@ -167,8 +164,6 @@ h1 .highlight {
     justify-content: center;
     flex-wrap: wrap;
 }
-
-/* ============================================================== */
 
 .card-item.main {
     border: none;
@@ -245,8 +240,6 @@ h1 .highlight {
     opacity: 0.7;
 }
 
-/* =============================================================== */
-
 .pagination {
     margin-top: 20px;
     font-size: 1.2em;
@@ -287,8 +280,6 @@ h1 .highlight {
     margin-bottom: 60px;
 }
 
-/* =================================================================== */
-
 .card-item.secondary {
     display: flex;
     align-items: center;
@@ -314,7 +305,7 @@ h1 .highlight {
     align-items: center;
 }
 
-.card-item.secondary .image-box{
+.card-item.secondary .image-box {
     width: 70px;
 }
 
@@ -359,6 +350,25 @@ h1 .highlight {
     margin: 15px;
 }
 
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid var(--highlight-color-header);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 @media (max-width: 900px) {
     .search-bar {
         width: 70%;
@@ -374,7 +384,7 @@ h1 .highlight {
         width: 80px;
         margin-right: 20px;
     }
-    
+
     .desc-img img {
         width: 50px;
         height: auto;
@@ -395,7 +405,7 @@ h1 .highlight {
         width: 130px;
     }
 
-    .card-description.secondary p{
+    .card-description.secondary p {
         width: 130px;
     }
 

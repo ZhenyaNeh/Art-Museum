@@ -83,6 +83,14 @@ header {
 }
 
 .link-style{
+    display: flex;
     text-decoration: none;
     color: white;
+    align-items: center;
 } 
+
+@media (max-width: 550px) {
+    .favorites-text {
+        display: none;
+    }
+}
