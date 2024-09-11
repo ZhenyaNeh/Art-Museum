@@ -1,39 +1,45 @@
-import React, { FC } from 'react'
-import { ArtData } from '../../constants/types'
-import { TypesOfCard } from './CardConstructor'
-import unfavorites from '../../assets/img/bookmark2.svg'
-import favorites from '../../assets/img/bookmark3.svg'
-import { useArtContext } from '../../App'
+import React, { FC } from 'react';
+
+import useBookmarkChange from '../../castom-hooks/useBookmarkChange';
+import { ArtData } from '../../constants/types';
+import images from '../../utils/ImageStorage/ImageStorage';
+import { TypesOfCard } from './CardConstructor';
 
 interface ItemDescription {
-  artData: ArtData | null,
-  typesOfCard: TypesOfCard
+  artData: ArtData | null;
+  typesOfCard: TypesOfCard;
 }
 
 const CardDescription: FC<ItemDescription> = ({ artData, typesOfCard }) => {
-  const { favoriteArtworks, toggleFavorite } = useArtContext();
+  const { isFavorited, toggleFavorite } = useBookmarkChange(artData?.id);
 
-  const handleInnerClick = (event: React.MouseEvent<HTMLDivElement>, number: number) => {
-    event.stopPropagation(); 
-    toggleFavorite(number);
+  const handleInnerClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    event.stopPropagation();
+    toggleFavorite();
   };
 
   return (
-    <div className='contener-description'>
-      <div className={"card-description " + typesOfCard}>
+    <div className="contener-description">
+      <div className={'card-description ' + typesOfCard}>
         <p>{artData?.title}</p>
         <p>{artData?.artist_title}</p>
-        <p>{artData?.is_public_domain ? 'Public' : 'Nopublic'}</p>
+        <p>{artData?.is_public_domain ? 'Public' : 'No public'}</p>
       </div>
-      <div className={"card-favorites " + typesOfCard}>
-        {artData?.id &&
+      <div className={'card-favorites ' + typesOfCard}>
+        {artData?.id && (
           <img
-            onClick={(event) => handleInnerClick(event, artData?.id)}
-            src={favoriteArtworks.includes(artData?.id) ? favorites : unfavorites}
-            alt="bookmark" />}
+            onClick={(event) => handleInnerClick(event)}
+            src={
+              isFavorited
+                ? images.bookmarkMainChecked
+                : images.bookmarkMainUnchecked
+            }
+            alt="bookmark"
+          />
+        )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CardDescription
+export default CardDescription;

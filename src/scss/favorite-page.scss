@@ -1,7 +1,6 @@
 :root {
     --highlight-color-header: #E0A449;
     --highlight-color-main: #F17900;
-    --background-color: #f9f9f9;
 }
 
 main.favorite-page {
@@ -35,15 +34,13 @@ main.favorite-page {
     margin: 0;
 }
 
-.favorite-page .title-info .title  h1 .highlight {
-    color: var(--highlight-color-main);
+.favorite-page .title-info .title h1 .highlight {
+    color: #EC671B;
 }
 
 .imgBookmark {
     width: 0.7em;
 }
-
-/* =============================================================== */
 
 .favorite-art {
     max-width: 1200px;
@@ -73,27 +70,3 @@ main.favorite-page {
 .other-works {
     margin-bottom: 60px;
 }
-
-/* .card-item.secondary {
-    display: flex;
-    justify-content: space-between;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 300px;
-    height: 150px;
-    margin: 20px 30px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-item.card-item.secondary:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.card-item.secondary img {
-    width: 100px;
-    height: 100px;
-    display: block;
-} */

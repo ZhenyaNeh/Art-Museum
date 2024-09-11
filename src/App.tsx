@@ -1,9 +1,10 @@
-import React, { FC, useState, createContext, useContext } from 'react'
-import HomePage from './pages/HomePage'
-import ArtItemPage from './pages/ArtItemPage'
+import React, { createContext, FC, useContext, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Layout from './pages/Layout';
+
+import ArtItemPage from './pages/ArtItemPage';
 import FavoritesPage from './pages/FavoritesPage';
+import HomePage from './pages/HomePage';
+import Layout from './pages/Layout';
 
 interface ArtContextType {
   favoriteArtworks: number[];
@@ -18,7 +19,7 @@ const App: FC = () => {
   const toggleFavorite = (artworkId: number) => {
     setFavoriteArtworks((prevFavorites) =>
       prevFavorites.includes(artworkId)
-        ? prevFavorites.filter(id => id !== artworkId)
+        ? prevFavorites.filter((id) => id !== artworkId)
         : [...prevFavorites, artworkId]
     );
   };
@@ -26,19 +27,18 @@ const App: FC = () => {
   return (
     <ArtContext.Provider value={{ favoriteArtworks, toggleFavorite }}>
       <Routes>
-        <Route path='/' element={<Layout />}>
+        <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
-          <Route path='favorites' element={<FavoritesPage />} />
-          <Route path='favorites/:id' element={<ArtItemPage />} />
-          <Route path='art/:id' element={<ArtItemPage />} />
+          <Route path="favorites" element={<FavoritesPage />} />
+          <Route path="favorites/:id" element={<ArtItemPage />} />
+          <Route path="art/:id" element={<ArtItemPage />} />
         </Route>
       </Routes>
     </ArtContext.Provider>
+  );
+};
 
-  )
-}
-
-export default App
+export default App;
 
 export function useArtContext() {
   const context = useContext(ArtContext);

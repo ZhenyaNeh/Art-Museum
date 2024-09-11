@@ -2,13 +2,18 @@
     --highlight-color-header: #E0A449;
     --highlight-color-main: #F17900;
     --background-color: #f9f9f9;
+    --input-background-color: #dadada;
+    --text-color: #333;
 }
 
 main.home-page {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     padding: 20px;
+    flex-direction: column; 
+    gap: 80px;
 }
 
 .title-info {
@@ -42,17 +47,33 @@ h1 .highlight {
     position: relative;
     display: flex;
     justify-content: center;
-    width: 50%;
+    flex-wrap: wrap;
+    width: 65%;
     margin: 0 auto;
     margin-top: 80px;
 }
 
-.search-bar input {
+.search-bar .search-input {
     width: 100%;
     padding: 10px;
     font-size: 16px;
     border: none;
-    background-color: #dedede;
+    background-color: var(--input-background-color);
+    border-radius: 6px;
+}
+
+.filter-list-style.none-visible {
+    display: none;
+}
+
+.filter-list-style.visible {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    height: 20px;
+    border: 1.5px solid #999;
     border-radius: 6px;
 }
 
@@ -61,15 +82,30 @@ h1 .highlight {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: var(--background-color);
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0px 4px 6px #0000001a;
     z-index: 10;
-    padding: 10px;
+    padding: 10px 0;
     max-height: 300px;
     overflow-y: auto;
 }
+
+.radio-input {
+    appearance: none;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1.5px solid #999;
+    transition: 0.2s all linear;
+    margin-right: 5px;
+}
+
+.radio-input:checked{
+    border: 5px solid var(--highlight-color-main);
+  }
 
 .div-searchbar.visible {
     display: block;
@@ -113,10 +149,6 @@ h1 .highlight {
     align-items: center;
 }
 
-.div-searchbar .decs-contener .desc-text {
-    width: 200px;
-}
-
 .div-searchbar .decs-contener .desc-time {
     width: 150px;
 }
@@ -140,7 +172,7 @@ h1 .highlight {
 .other-works {
     max-width: 1200px;
     text-align: center;
-    padding: 80px 20px;
+    padding: 0px 20px;
     padding-bottom: 0;
 }
 
@@ -197,7 +229,7 @@ h1 .highlight {
     justify-content: space-between;
     align-items: center;
     width: 240px;
-    background-color: white;
+    background-color: #fff;
     top: -40px;
     left: 15px;
     padding: 15px;
@@ -211,7 +243,7 @@ h1 .highlight {
 .card-description.main p {
     margin: 5px 0;
     font-size: 1rem;
-    color: #555;
+    color: var(--text-color);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -220,7 +252,11 @@ h1 .highlight {
 .card-description.main p:first-child {
     font-weight: bold;
     font-size: 1.2rem;
-    color: #333;
+    color: var(--text-color);
+}
+
+.card-description.main p:nth-child(2) {
+    color: var(--highlight-color-header);
 }
 
 .card-favorites.main {
@@ -243,7 +279,7 @@ h1 .highlight {
 .pagination {
     margin-top: 20px;
     font-size: 1.2em;
-    color: #333;
+    color: var(--text-color);
 }
 
 .pagination div {
@@ -269,7 +305,7 @@ h1 .highlight {
 .div-pagination.visible {
     display: inline-block;
     background-color: var(--background-color);
-    color: #333;
+    color: var(--text-color);
 }
 
 .div-pagination.non-visible {
@@ -287,7 +323,7 @@ h1 .highlight {
     max-width: 350px;
     border-radius: 2px;
     border: 1px solid #dcdcdcbc;
-    background-color: white;
+    background-color: #fff;
     padding: 10px;
     margin: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -295,7 +331,7 @@ h1 .highlight {
 
 .card-item.card-item.secondary:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 12px #00000026;
 }
 
 .card-item.secondary .contener-description {
@@ -320,7 +356,7 @@ h1 .highlight {
     margin: 0;
     margin-bottom: 5px;
     font-size: 14px;
-    color: #333;
+    color: var(--text-color);
     text-align: left;
     font-weight: bold;
     white-space: nowrap;
@@ -334,12 +370,11 @@ h1 .highlight {
 }
 
 .card-description.secondary p:nth-child(2) {
-    color: #d4912f;
-
+    color: var(--highlight-color-header);
 }
 
 .card-description.secondary p:nth-child(3) {
-    color: #555;
+    color: var(--text-color);
     font-size: 12px;
 }
 
@@ -350,13 +385,20 @@ h1 .highlight {
     margin: 15px;
 }
 
+.loader-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+}
+
 .loader {
-    border: 4px solid #f3f3f3;
-    border-top: 4px solid var(--highlight-color-header);
+    border: 7px solid #ddd;
+    border-top: 7px solid var(--highlight-color-header);
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    animation: spin 2s linear infinite;
+    width: 50px;
+    height: 50px;
+    animation: spin 1.5s linear infinite;
 }
 
 @keyframes spin {
@@ -369,9 +411,24 @@ h1 .highlight {
     }
 }
 
+@media (max-width: 1210px) {
+    .div-searchbar .decs-contener .desc-text {
+        width: 350px;
+    }
+}
+
 @media (max-width: 900px) {
     .search-bar {
         width: 70%;
+    }
+    .div-searchbar .decs-contener .desc-text {
+        width: 300px;
+    }
+}
+
+@media (max-width: 710px) {
+    .div-searchbar .decs-contener .desc-text {
+        width: 220px;
     }
 }
 
@@ -395,12 +452,11 @@ h1 .highlight {
     }
 
     .div-searchbar .decs-contener .desc-text {
-        width: 135px;
+        width: 150px;
     }
 }
 
 @media (max-width: 420px) {
-
     .card-description.secondary {
         width: 130px;
     }
@@ -411,5 +467,10 @@ h1 .highlight {
 
     .other-works {
         padding: 80px 0;
+    }
+
+    .special-gallery {
+        padding: 80px 0;
+        padding-bottom: 0;
     }
 }

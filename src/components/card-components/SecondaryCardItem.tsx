@@ -1,4 +1,7 @@
-import CardConstructor, { TypesOfCard } from './CardConstructor'
+import CardConstructor, { TypesOfCard } from './CardConstructor';
 
-const SecondaryCardItem = CardConstructor(TypesOfCard.secondary, 'SecondaryCardItem')
-export default SecondaryCardItem
+const SecondaryCardItem = CardConstructor(
+  TypesOfCard.secondary,
+  'SecondaryCardItem'
+);
+export default SecondaryCardItem;
