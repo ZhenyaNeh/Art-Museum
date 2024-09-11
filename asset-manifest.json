@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Art-Museum/static/css/main.fe797f4b.css",
-    "main.js": "/Art-Museum/static/js/main.bb427f82.js",
+    "main.js": "/Art-Museum/static/js/main.c9ad9a3c.js",
     "static/media/bookmark3.svg": "/Art-Museum/static/media/bookmark3.5b4820b71cf0b9e001dc3d9d46d87b9e.svg",
     "static/media/bookmark1.svg": "/Art-Museum/static/media/bookmark1.049b2f90556c1f3d2eeb70bc5289e9f2.svg",
     "static/media/bookmark2.svg": "/Art-Museum/static/media/bookmark2.5cc6c92fc6ee740b02b82c6ce1a6b4ed.svg",
@@ -10,10 +10,10 @@
     "static/media/home2.svg": "/Art-Museum/static/media/home2.de25cdf7cde9893f94baf8c94dbbac15.svg",
     "index.html": "/Art-Museum/index.html",
     "main.fe797f4b.css.map": "/Art-Museum/static/css/main.fe797f4b.css.map",
-    "main.bb427f82.js.map": "/Art-Museum/static/js/main.bb427f82.js.map"
+    "main.c9ad9a3c.js.map": "/Art-Museum/static/js/main.c9ad9a3c.js.map"
   },
   "entrypoints": [
     "static/css/main.fe797f4b.css",
-    "static/js/main.bb427f82.js"
+    "static/js/main.c9ad9a3c.js"
   ]
 }
