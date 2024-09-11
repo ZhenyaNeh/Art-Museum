@@ -1,12 +1,11 @@
-import '../scss/favorite-page.scss';
+import '@scss/favorite-page.scss';
 
+import SecondaryCardItem from '@components/card-components/SecondaryCardItem';
+import Loader from '@components/main-components/Loader';
+import useFavoritesFetch from '@custom-hooks/useFavoritesFetch';
+import images from '@utils/ImageStorage/ImageStorage';
 import React, { FC, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
-
-import useFavoritesFetch from '../castom-hooks/useFavoritesFetch';
-import SecondaryCardItem from '../components/card-components/SecondaryCardItem';
-import Loader from '../components/main-components/Loader';
-import images from '../utils/ImageStorage/ImageStorage';
 
 const FavoritesPage: FC = () => {
   const { arts, loading, error } = useFavoritesFetch();

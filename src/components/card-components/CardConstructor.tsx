@@ -1,6 +1,6 @@
+import { ArtConfig, ArtData } from '@utils/Types/types';
 import React, { FC } from 'react';
 
-import { ArtConfig, ArtData } from '../../constants/types';
 import CardDescription from './CardDescription';
 
 export enum TypesOfCard {

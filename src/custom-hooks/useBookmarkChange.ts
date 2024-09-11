@@ -1,6 +1,5 @@
+import { LocalStorageManager } from '@utils/localStorage/localStorage';
 import { useEffect, useState } from 'react';
-
-import { LocalStorageManager } from '../utils/localStorage/localStorage';
 
 const useBookmarkChange = (id: number | undefined) => {
   const localStorageManager = new LocalStorageManager();

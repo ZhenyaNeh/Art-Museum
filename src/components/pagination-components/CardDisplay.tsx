@@ -1,8 +1,7 @@
+import MainCardItem from '@components/card-components/MainCardItem';
+import { ArtConfig, ArtData } from '@utils/Types/types';
 import React, { FC } from 'react';
 import { useNavigate } from 'react-router-dom';
-
-import { ArtConfig, ArtData } from '../../constants/types';
-import MainCardItem from '../card-components/MainCardItem';
 
 interface CardDisplayProps {
   data: ArtData[];

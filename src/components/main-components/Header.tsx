@@ -1,9 +1,8 @@
-import '../../scss/header-styles.scss';
+import '@scss/header-styles.scss';
 
+import images from '@utils/ImageStorage/ImageStorage';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
-import images from '../../utils/ImageStorage/ImageStorage';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

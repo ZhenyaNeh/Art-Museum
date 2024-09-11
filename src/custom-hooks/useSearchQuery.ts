@@ -1,7 +1,6 @@
+import { fetchSearchData } from '@api/api';
+import { ArtsInfo } from '@utils/Types/types';
 import { useState } from 'react';
-
-import { fetchSearchData } from '../api/api';
-import { ArtsInfo } from '../constants/types';
 
 const useSearchQuery = () => {
   const [arts, setArts] = useState<ArtsInfo | null>(null);
@@ -17,7 +16,9 @@ const useSearchQuery = () => {
       if (query) {
         const response = await fetchSearchData(query, isPublic);
         setArts(response);
+        setError(null);
       } else {
+        setError('No Result');
         setArts(null);
       }
     } catch (err: unknown) {

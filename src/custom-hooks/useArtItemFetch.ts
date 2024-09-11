@@ -1,7 +1,6 @@
+import { fetchArtItemData } from '@api/api';
+import { ArtInfo } from '@utils/Types/types';
 import { useEffect, useState } from 'react';
-
-import { fetchArtItemData } from '../api/api';
-import { ArtInfo } from '../constants/types';
 
 const useArtItemFetch = (id: string) => {
   const [art, setArt] = useState<ArtInfo | null>(null);

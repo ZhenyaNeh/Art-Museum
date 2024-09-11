@@ -1,7 +1,8 @@
+import { ArtData } from '@utils/Types/types';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { ArtData } from '../constants/types';
+import useDebounce from './useDebounce';
 import useSearchQuery from './useSearchQuery';
 
 type Visibility = 'visible' | 'none-visible';
@@ -13,13 +14,16 @@ const useSearchBar = () => {
   const IMG = process.env.REACT_APP_API_IMG;
   const [publicDomain, setPublicDomain] = useState<boolean>(true);
   const [visibility, setVisibility] = useState<Visibility>('none-visible');
+  const debouncedQuery = useDebounce(query, 500);
 
   const changeVisible = () => setVisibility('visible');
   const changeNoneVisible = () => setVisibility('none-visible');
 
   useEffect(() => {
-    fetchDataForSearch(query, publicDomain);
-  }, [query, publicDomain]);
+    if (debouncedQuery) {
+      fetchDataForSearch(query, publicDomain);
+    }
+  }, [debouncedQuery, publicDomain]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;

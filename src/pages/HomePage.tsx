@@ -1,15 +1,14 @@
-import '../scss/home-page.scss';
+import '@scss/home-page.scss';
 
+import SecondaryCardItem from '@components/card-components/SecondaryCardItem';
+import Loader from '@components/main-components/Loader';
+import CardDisplay from '@components/pagination-components/CardDisplay';
+import Pagination from '@components/pagination-components/Pagination';
+import SearchBar from '@components/search-bar-component/SearchBar';
+import useHomeFetch from '@custom-hooks/useHomeFetch';
+import usePaginationFetch from 'custom-hooks/usePaginationFetch';
 import React, { FC, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
-
-import useHomeFetch from '../castom-hooks/useHomeFetch';
-import usePaginationFetch from '../castom-hooks/usePaginationFetch';
-import SecondaryCardItem from '../components/card-components/SecondaryCardItem';
-import Loader from '../components/main-components/Loader';
-import CardDisplay from '../components/pagination-components/CardDisplay';
-import Pagination from '../components/pagination-components/Pagination';
-import SearchBar from '../components/search-bar-component/SearchBar';
 
 const HomePage: FC = () => {
   const { arts, loading, error } = useHomeFetch();

@@ -1,8 +1,7 @@
-import '../../scss/footer-styles.scss';
+import '@scss/footer-styles.scss';
 
+import images from '@utils/ImageStorage/ImageStorage';
 import React from 'react';
-
-import images from '../../utils/ImageStorage/ImageStorage';
 
 function Footer() {
   return (

@@ -1,8 +1,7 @@
+import { fetchFavoriteData } from '@api/api';
+import { LocalStorageManager } from '@utils/localStorage/localStorage';
+import { ArtInfo, ArtsInfo } from '@utils/Types/types';
 import { useEffect, useState } from 'react';
-
-import { fetchFavoriteData } from '../api/api';
-import { ArtInfo, ArtsInfo } from '../constants/types';
-import { LocalStorageManager } from '../utils/localStorage/localStorage';
 
 const useFavoritesFetch = () => {
   const localStorageManager = new LocalStorageManager();

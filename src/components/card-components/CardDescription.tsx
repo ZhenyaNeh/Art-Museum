@@ -1,8 +1,8 @@
+import useBookmarkChange from '@custom-hooks/useBookmarkChange';
+import images from '@utils/ImageStorage/ImageStorage';
+import { ArtData } from '@utils/Types/types';
 import React, { FC } from 'react';
 
-import useBookmarkChange from '../../castom-hooks/useBookmarkChange';
-import { ArtData } from '../../constants/types';
-import images from '../../utils/ImageStorage/ImageStorage';
 import { TypesOfCard } from './CardConstructor';
 
 interface ItemDescription {

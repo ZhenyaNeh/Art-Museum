@@ -1,7 +1,6 @@
+import { fetchHomeData } from '@api/api';
+import { ArtsInfo } from '@utils/Types/types';
 import { useEffect, useState } from 'react';
-
-import { fetchHomeData } from '../api/api';
-import { ArtsInfo } from '../constants/types';
 
 const useHomeFetch = () => {
   const [arts, setArts] = useState<ArtsInfo | null>(null);

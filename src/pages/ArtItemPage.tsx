@@ -1,12 +1,11 @@
-import '../scss/art-item-page.scss';
+import '@scss/art-item-page.scss';
 
+import Loader from '@components/main-components/Loader';
+import images from '@utils/ImageStorage/ImageStorage';
+import useArtItemFetch from 'custom-hooks/useArtItemFetch';
+import useBookmarkChange from 'custom-hooks/useBookmarkChange';
 import React, { FC, useMemo } from 'react';
 import { useParams } from 'react-router-dom';
-
-import useArtItemFetch from '../castom-hooks/useArtItemFetch';
-import useBookmarkChange from '../castom-hooks/useBookmarkChange';
-import Loader from '../components/main-components/Loader';
-import images from '../utils/ImageStorage/ImageStorage';
 
 type ArtItemPageParams = {
   id: string;

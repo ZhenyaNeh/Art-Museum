@@ -1,6 +1,5 @@
-import { renderHook } from '@testing-library/react-hooks';
-
-import useHalpersPagination from '../castom-hooks/useHalpersPagination';
+import useHalpersPagination from '@custom-hooks/useHalpersPagination';
+import { renderHook } from '@testing-library/react';
 
 describe('useHalpersPagination', () => {
   let mockDivs: HTMLElement[];

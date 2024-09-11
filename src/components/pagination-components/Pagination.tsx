@@ -1,7 +1,6 @@
+import useHalpersPagination from '@custom-hooks/useHalpersPagination';
+import images from '@utils/ImageStorage/ImageStorage';
 import React, { FC, useEffect, useState } from 'react';
-
-import useHalpersPagination from '../../castom-hooks/useHalpersPagination';
-import images from '../../utils/ImageStorage/ImageStorage';
 
 interface PaginationProps {
   togglePage: (pageNum: number) => void;

@@ -21,7 +21,12 @@
     "jsx": "react-jsx",
     "baseUrl": "src",
     "paths": {
+      "@api/*": ["api/*"],
+      "@assets/*": ["assets/*"],
+      "@custom-hooks/*": ["custom-hooks/*"],
       "@components/*": ["components/*"],
+      "@pages/*": ["pages/*"],
+      "@scss/*": ["scss/*"],
       "@utils/*": ["utils/*"]
     }
   },

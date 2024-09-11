@@ -1,4 +1,4 @@
-import { ArtInfo, ArtsInfo } from '../constants/types';
+import { ArtInfo, ArtsInfo } from '../utils/Types/types';
 
 const URL = process.env.REACT_APP_API_URL;
 const FIELDS = process.env.REACT_APP_API_FIELDS;

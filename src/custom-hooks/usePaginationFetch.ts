@@ -1,7 +1,6 @@
+import { fetchPaginationData } from '@api/api';
+import { ArtsInfo } from '@utils/Types/types';
 import { useEffect, useState } from 'react';
-
-import { fetchPaginationData } from '../api/api';
-import { ArtsInfo } from '../constants/types';
 
 const usePaginationFetch = () => {
   const [artsPage, setArtsPage] = useState<ArtsInfo | null>(null);
