@@ -18,7 +18,6 @@ const useSearchQuery = () => {
         const response = await fetchSearchData(query, isPublic);
         setArts(response);
       } else {
-        setError('No Result');
         setArts(null);
       }
     } catch (err: unknown) {
