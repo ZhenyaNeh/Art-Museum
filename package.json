@@ -31,6 +31,12 @@
     ]
   },
   "type": "commonjs",
+  "jest": {
+    "moduleNameMapper": {
+      "^@api/(.*)$": "<rootDir>/src/api/$1",
+      "^@custom-hooks/(.*)$": "<rootDir>/src/custom-hooks/$1"
+    }
+  },
   "scripts": {
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",

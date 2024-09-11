@@ -1,5 +1,5 @@
 import Loader from '@components/main-components/Loader';
-import useSearchBar from 'custom-hooks/useSearchBar';
+import useSearchBar from '@custom-hooks/useSearchBar';
 import React, { FC } from 'react';
 
 const SearchBar: FC = () => {

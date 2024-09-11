@@ -6,7 +6,7 @@ import CardDisplay from '@components/pagination-components/CardDisplay';
 import Pagination from '@components/pagination-components/Pagination';
 import SearchBar from '@components/search-bar-component/SearchBar';
 import useHomeFetch from '@custom-hooks/useHomeFetch';
-import usePaginationFetch from 'custom-hooks/usePaginationFetch';
+import usePaginationFetch from '@custom-hooks/usePaginationFetch';
 import React, { FC, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 

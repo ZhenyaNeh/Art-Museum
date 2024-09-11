@@ -1,9 +1,9 @@
 import '@scss/art-item-page.scss';
 
 import Loader from '@components/main-components/Loader';
+import useArtItemFetch from '@custom-hooks/useArtItemFetch';
+import useBookmarkChange from '@custom-hooks/useBookmarkChange';
 import images from '@utils/ImageStorage/ImageStorage';
-import useArtItemFetch from 'custom-hooks/useArtItemFetch';
-import useBookmarkChange from 'custom-hooks/useBookmarkChange';
 import React, { FC, useMemo } from 'react';
 import { useParams } from 'react-router-dom';
 
